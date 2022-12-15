@@ -1,0 +1,159 @@
+:root {
+    font-family: "Inter", sans-serif;
+    --secondary: #ED398C;
+}
+
+/* Global stlyes */
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    line-height: 170%;
+}
+
+button {
+    width: 14.75rem;
+    height: 2.94rem;
+    background: #000000;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    transition: .2s linear;
+}
+
+button:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-container {
+    margin: 2rem 7rem 0 7rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav #logo {
+    width: 11.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav ul a {
+    font-weight: 600;
+}
+
+nav ul a:hover {
+    color: var(--secondary);
+}
+
+/* End of global styles */
+
+/* Home Page */
+
+header {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+#header-content {
+    max-width: 29.5rem;
+}
+
+header #categories {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+header .category p {
+    font-weight: 700;
+}
+
+header .category img {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transition: .1s ease-out;
+}
+
+header .category img:hover {
+    box-shadow: 0px 0px 11px 2px #ED398C;
+    cursor: pointer;
+}
+
+#header-img img{
+    max-width: 43.31rem;
+    height: 23.31rem;
+    margin-top: -1.5rem;
+}
+
+#carlsbad-info {
+    margin-top: 6rem;
+    display: flex;
+    gap: 9.625rem;
+}
+
+#carlsbad-img img {
+    width: 27.31rem;
+    height: 23.44rem;
+}
+
+#carlsbad-text {
+    text-align: right;
+}
+
+#make-your-drink {
+    margin-top: 8.75rem;
+    max-width: 100%;
+    height: 23rem;
+    background: linear-gradient(180deg, #FCC361 0%, #ED398C 97.93%);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+#weather-section{
+    margin-top: 8.75rem;
+    display: grid;
+    place-items: center;
+}
+
+#current-weather-card {
+    width: 16.38rem;
+    height: 13.5rem;
+    background-image: url("../images/weather.png");
+    box-shadow: 0px 1px 40px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}

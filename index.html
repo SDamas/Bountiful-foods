@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <!-- Javascript -->
+    <script src="js/weather.js"></script>
+    <title>Bountiful Foods</title>
+</head>
+<body>
+    <div class="page-container">
+        <section id="navbar-container">
+            <nav>
+                <img id="logo" src="images/logo.png" alt="Bountiful Foods logo">
+                <ul>
+                    <a href="./"><li>Home</li></a>
+                    <a href="fresh.html"><li>Fresh</li></a>
+                    <a href="about.html"><li>About us</li></a>
+                    <li>+55 (11) 1234-5678</li>
+                </ul>
+                <div id="social-icons">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </nav>
+        </section>
+        <header>
+            <div id="header-content">
+                <h1>Fresh and healthy<br> food options</h1>
+                <p>We specialize in planting and providing the best fresh
+                    food options for your needs. All you need for a healthier - and happier - life.
+                </p>
+                <div id="categories">
+                    <div class="category">
+                        <p>Fruits</p>
+                        <img src="images/fruits.jpg" alt="Different types of fruits together">
+                    </div>
+                    <div class="category">
+                        <p>Greens</p>
+                        <img src="images/greens.jpg" alt="A bowl with greens falling in it">
+                    </div>
+                    <div class="category">
+                        <p>Vegetables</p>
+                        <img src="images/vegetables.jpg" alt="Different types of vegetables together">
+                    </div>
+                </div>
+            </div>
+            <div id="header-img">
+                <img src="images/strawberry.png" alt="A strawberry">
+            </div>
+        </header>
+        <section id="carlsbad-info">
+            <div id="carlsbad-img">
+                <img src="images/carlsbad.png" alt="A view from above the city Carlsbad, state of California">
+            </div>
+            <div id="carlsbad-text">
+                <h2>Carlsbad. Our city.</h2>
+                <p>Carlsbad is a city located in the northern part of San Diego County, California. It is situated along the Pacific Ocean and has a population of around 110,000 people. </p>
+                <p>The city is known for its beautiful beaches and resorts, as well as its proximity to other popular tourist destinations such as Legoland California and the Flower Fields at Carlsbad Ranch.</p>
+                <p>The economy of Carlsbad is driven by tourism, as well as by the presence of several major technology and biotechnology companies in the area. The city has a Mediterranean climate, with warm, dry summers and mild, wet winters.</p>
+            </div>
+        </section>
+        <section id="make-your-drink">
+            <h2>Make your fruit drink mix</h2>
+            <p>Choose from a variety of ingredients to create your<br>
+                unforgettable drink. Stay cool while enjoying the city.
+            </p>
+            <a href="fresh.html"><button>Make my drink mix</button></a>
+            <p>Your current orders: <span id="current-orders"></span></p>
+        </section>
+        <section id="weather-section">
+            <h2>Weather in Carlsbad</h2>
+            <div id="current-weather-card">
+                <span id="temperature"></span>
+                <span id="description"></span>
+                <span id="humidity"></span>
+            </div>
+            <section id="3-day-weather-forecast">
+                <div id="day-1">
+                    <h3>Tomorrow</h3>
+                    <div class="forecasts">
+                        <h5 id="time">12:00</h5>
+                        <p id="weather">30º</p>
+                    </div>
+                </div>
+                <div id="day-2">
+                    <h3>In 2 days</h3>
+                    <div class="forecasts">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="day-3">
+                    <h3>In 3 days</h3>
+                    <div class="forecasts">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

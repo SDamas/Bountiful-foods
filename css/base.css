@@ -55,6 +55,9 @@ ul {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding: 2rem 7rem 1rem 7rem;
 }
 
 #logo {
@@ -74,12 +77,57 @@ nav ul a:hover {
     color: var(--secondary);
 }
 
+#nav-rectangle {
+    height: 5px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+#navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+#social-icons {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.youtube {
+    width: 38px;
+    height: 38px;
+}
 /* End of global styles */
+
+/* Keyframes */
+@keyframes float {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 /* Home Page */
 
 header {
-    margin-top: 7rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
     gap: 10rem;
@@ -104,18 +152,26 @@ header .category img {
     height: 3.75rem;
     border-radius: 50%;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
-    transition: .1s ease-out;
+    transition: .1s ease-out box-shadow;
+    transition: .4s ease-out transform;
 }
 
 header .category img:hover {
     box-shadow: 0px 0px 11px 2px #ED398C;
     cursor: pointer;
+    transform: rotate(-360deg);
 }
 
 #header-img img{
     max-width: 43.31rem;
     height: 23.31rem;
-    margin-top: -1.5rem;
+    margin-top: -3rem;
+    animation: 7s float forwards infinite;
+    transition: .5s;
+}
+
+#header-img img:hover {
+    scale: 1.1;
 }
 
 #carlsbad-info {
@@ -167,7 +223,7 @@ header .category img:hover {
 
 #current-weather-card #temperature {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
 }
 
@@ -246,4 +302,73 @@ footer #site-map {
 footer #page-info {
     font-size: 14px;
     margin-top: 3.19rem;
+}
+
+/* Fresh page */
+#fresh-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.form-field, .form-field input, textarea {
+    width: 100%;
+}
+
+.form-field {
+    margin-bottom: 2rem;
+}
+
+#fruit-options {
+    display: flex;
+    gap: 1rem;
+}
+
+#fruit-options select {
+    max-width: 10.5rem;
+    height: 44px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 0 1rem;
+}
+
+
+input {
+    border: none;
+    border-bottom: 1px solid #ED398C;
+    height: 36px;
+}
+
+textarea {
+    height: 10rem;
+    border: none;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    padding: 1.25rem;
+}
+
+/* About us page */
+#about-main-container {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+#about-main-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+/* Attribution page */
+#attribution-main-container {
+    margin-top: 10rem;
+    min-height: 50vh;
+}
+
+#attribution-main-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
 }

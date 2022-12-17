@@ -13,27 +13,28 @@
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
     <!-- Javascript -->
-    <script src="js/weather.js"></script>
+    <script src="js/weather.js" defer></script>
     <title>Bountiful Foods</title>
 </head>
 <body>
+    <section id="navbar-container">
+        <nav>
+            <a href="./"><img id="logo" src="images/logo.png" alt="Bountiful Foods logo"></a>
+            <ul>
+                <a href="./"><li>Home</li></a>
+                <a href="fresh.html"><li>Fresh</li></a>
+                <a href="about.html"><li>About us</li></a>
+                <li>(123) 456-7890</li>
+            </ul>
+            <div id="social-icons">
+                <a href="#"><img class="social-icon" src="images/instagram.png" alt="Instagram's logo"></a>
+                <a href="#"><img class="social-icon" src="images/twitter.png" alt="Twitter's logo"></a>
+                <a href="#"><img class="social-icon youtube" src="images/youtube.png" alt=""></a>
+            </div>
+        </nav>
+        <div id="nav-rectangle"></div>
+    </section>
     <div class="page-container">
-        <section id="navbar-container">
-            <nav>
-                <img id="logo" src="images/logo.png" alt="Bountiful Foods logo">
-                <ul>
-                    <a href="./"><li>Home</li></a>
-                    <a href="fresh.html"><li>Fresh</li></a>
-                    <a href="about.html"><li>About us</li></a>
-                    <li>+55 (11) 1234-5678</li>
-                </ul>
-                <div id="social-icons">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
-            </nav>
-        </section>
         <header>
             <div id="header-content">
                 <h1>Fresh and healthy<br> food options</h1>
@@ -81,9 +82,9 @@
         <section id="weather-section">
             <h2>Weather in Carlsbad</h2>
             <div id="current-weather-card">
-                <span id="temperature">30</span>
-                <span id="description">moderate rain</span>
-                <span id="humidity">humidity: 64</span>
+                <span id="temperature"></span>
+                <span id="description"></span>
+                <span id="humidity"></span>
             </div>
             <section id="three-day-weather-forecast">
                 <div id="day-1">
@@ -111,13 +112,14 @@
         </section>
     </div>
     <footer>
-        <img id="logo" src="images/logo-white.png" alt="Bountiful Foods logo">
+        <a href="./"><img id="logo" src="images/logo-white.png" alt="Bountiful Foods logo"></a>
         <div id="site-map">
             <span>Site map</span>
             <ul>
-                <li>Home</li>
-                <li>Fresh</li>
-                <li>About us</li>
+                <a href="./"><li>Home</li></a>
+                <a href="fresh.html"><li>Fresh</li></a>
+                <a href="about.html"><li>About us</li></a>
+                <a href="attribution.html"><li>Attribution</li></a>
             </ul>
         </div>
         <p id="page-info">Samad Damas | Last modified:<span id="last-modified"></span></p>

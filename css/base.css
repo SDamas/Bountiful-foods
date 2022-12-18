@@ -20,6 +20,7 @@ h2 {
 
 p {
     line-height: 170%;
+    color: #303030;
 }
 
 button {
@@ -49,7 +50,7 @@ ul {
 }
 
 .page-container {
-    margin: 2rem 7rem 0 7rem;
+    padding: 2rem 7rem 0 7rem;
 }
 
 nav {
@@ -57,7 +58,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    padding: 2rem 7rem 1rem 7rem;
+    padding: 2rem 4rem 1rem 4rem;
 }
 
 #logo {
@@ -127,7 +128,7 @@ nav ul a:hover {
 /* Home Page */
 
 header {
-    margin-top: 10rem;
+    margin-top: 8.5rem;
     display: flex;
     justify-content: center;
     gap: 10rem;
@@ -191,12 +192,17 @@ header .category img:hover {
 
 #make-your-drink {
     margin-top: 8.75rem;
+    padding: 2rem;
     max-width: 100%;
-    height: 23rem;
+    min-height: 23rem;
     background: linear-gradient(180deg, #FCC361 0%, #ED398C 97.93%);
     border-radius: 8px;
     display: grid;
     place-items: center;
+    color: white;
+}
+
+#make-your-drink p {
     color: white;
 }
 
@@ -235,6 +241,7 @@ header .category img:hover {
 
 #three-day-weather-forecast {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 3.75rem;
     text-align: left;
@@ -309,8 +316,12 @@ footer #page-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-bottom: 5rem;
+}
+
+form {
+    padding-right: 2rem;
 }
 
 .form-field, .form-field input, textarea {
@@ -327,7 +338,7 @@ footer #page-info {
 }
 
 #fruit-options select {
-    max-width: 10.5rem;
+    width: 100%;
     height: 44px;
     background: #FFFFFF;
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
@@ -363,7 +374,7 @@ textarea {
 
 /* Attribution page */
 #attribution-main-container {
-    margin-top: 10rem;
+    margin-top: 9rem;
     min-height: 50vh;
 }
 
@@ -371,4 +382,86 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: .6rem;
+}
+
+#google-maps {
+    height: 300px;
+    width: 100%;
+}
+
+/* Hamburger Navbar */
+.nav-items.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    list-style: none;
+    padding-right: 4rem;
+    padding-top: 6rem;
+    height: 100vh;
+}
+
+.nav-items.hamburger a {
+    font-size: 1.7rem;
+    color: white;
+    transition: .1s linear all;
+    border-bottom: 1px solid #ED398C;
+    width: 30%;
+    text-align: right;
+}
+
+.nav-items.hamburger a:hover {
+    color: #ED398C;
+}
+
+#hamburger-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger-menu {
+    height: 100vh;
+    width: 100vh;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    transform: translateX(12rem);
+    padding-top: 1rem;
+    display: none;
+}
+
+.hamburger-menu.open {
+    display: block;
+    min-height: 100vh;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    animation: slidein-right .3s forwards;
+}
+
+@keyframes slidein-right {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hamburger-menu #close-hamburger-menu-btn {
+    color: white;
+    background-color: #ED398C;
+    margin: 1rem;
+    padding: .5rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    margin-left: 3rem;
+    position: absolute;
+    right: 3rem;
+}
+
+.hamburger-menu #close-hamburger-menu-btn:hover {
+    cursor: pointer;
 }

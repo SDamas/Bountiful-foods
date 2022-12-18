@@ -28,7 +28,7 @@ async function displayWeather() {
 displayWeather();
 
 async function getThreeDayForecast() {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`);
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=imperial`);
     const data = await response.json();
     console.log(data);
     return data;
@@ -37,32 +37,22 @@ async function getThreeDayForecast() {
 getThreeDayForecast();
 
 async function displayThreeDayForecast() {
+    const weather = await getThreeDayForecast();
+    // Get weather for tomorrow
+    const weatherTomorrow = weather.list[10].main.temp;
+    const weatherTomorrowDescription = weather.list[10].weather[0].description;
+    // Get weather in 2 days (ficticious)
+    const weatherInTwoDays = weather.list[20].main.temp;
+    const weatherInTwoDaysDescription = weather.list[20].weather[0].description;
+    // Get weather in 3 days (ficticous)
+    const weatherInThreeDays = weather.list[30].main.temp;
+    const weatherInThreeDaysDescription = weather.list[30].weather[0].description;
+    console.log(`${weatherTomorrow}${weatherInTwoDays}${weatherInThreeDays}`)
 
+    // Display weather
+    document.querySelector("#weather-tomorrow").textContent = `${weatherTomorrow} ºF ${weatherTomorrowDescription}`;
+    document.querySelector("#weather-in-two-days").textContent = `${weatherInTwoDays} ºF ${weatherInTwoDaysDescription}`
+    document.querySelector("#weather-in-three-days").textContent = `${weatherInThreeDays} ºF ${weatherInThreeDaysDescription}`
 }
 
-function getWeekDay(number) {
-    let weekDay;
-    switch (number) {
-        case 0:
-            weekDay = "Monday";
-            break
-        case 1:
-            weekDay = "Tuesday";
-            break
-        case 2:
-            weekDay = "Wednesday";
-            break
-        case 3:
-            weekDay = "Thursday";
-            break
-        case 4:
-            weekDay = "Friday";
-            break
-        case 5:
-            weekDay = "Saturday";
-            break
-        default:
-            weekDay = "Sunday";
-    }
-    return weekDay;
-}
+displayThreeDayForecast();

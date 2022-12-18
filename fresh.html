@@ -7,13 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <!-- Material symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
     <!-- Javascript -->
-    <script src="js/weather.js"></script>
+    <script src="js/scripts.js" defer></script>
+    <script src="js/hamburger_menu.js" defer></script>
+    <script src="js/drink_form.js" defer></script>
+    <script src="js/orders.js" defer></script>
     <title>Bountiful Foods</title>
 </head>
 <body>
@@ -31,45 +36,57 @@
                 <a href="#"><img class="social-icon" src="images/twitter.png" alt="Twitter's logo"></a>
                 <a href="#"><img class="social-icon youtube" src="images/youtube.png" alt=""></a>
             </div>
+            <button id="hamburger-btn"><span class="material-symbols-outlined">menu</span></button>
         </nav>
         <div id="nav-rectangle"></div>
+    </section>
+    <section class="hamburger-menu">
+        <div id="close-hamburger-menu-btn"><span class="material-symbols-outlined">close</span></div>
+        <ul class="nav-items hamburger">
+            <a href="./"><li>Home</li></a>
+            <a href="fresh.html"><li>Fresh</li></a>
+            <a href="about.html"><li>About us</li></a>
+        </ul>
     </section>
     <div class="page-container">
         <main id="fresh-main-container">
             <h2>Your specialty drink</h2>
-            <p>make your most amazing specialty drink</p>
+            <p>Make your most amazing specialty drink.</p>
             <div id="form-container">
                 <p>Please, provide the following information so that we can make your order ;)</p>
                 <form>
                     <div class="form-field">
-                        <input type="text" name="name" placeholder="Name">
+                        <input id="name" type="text" name="name" placeholder="Name" required>
                     </div>
                     <div class="form-field">
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input id="email" type="email" name="email" placeholder="E-mail" required>
                     </div>
                     <div class="form-field">
-                        <input type="number" name="phone" placeholder="Phone">
+                        <input id="phone" type="char" name="phone" placeholder="Phone" required>
                     </div>
                     <div class="form-field">
                         <p>What is going in your drink?</p>
                         <div id="fruit-options">
-                            <select name="first-fruit">
-                                <option value="">Pick</option>
+                            <select id="first-fruit" required>
+                                <option>Pick</option>
                             </select>
-                            <select name="second-fruit">
-                                <option value="">Pick</option>
+                            <select id="second-fruit" required>
+                                <option>Pick</option>
                             </select>
-                            <select name="third-fruit">
-                                <option value="">Pick</option>
+                            <select id="third-fruit" required>
+                                <option>Pick</option>
                             </select>
                         </div>
+                        <input id="first-fruit-nutritional-info" type="hidden">
+                        <input id="second-fruit-nutritional-info" type="hidden">
+                        <input id="third-fruit-nutritional-info" type="hidden">
                     </div>
                     <div class="form-field">
                         <p>Want to add special instructions?</p>
-                        <textarea name="special-instructions" placeholder="I would like..."></textarea>
+                        <textarea id="special-instructions" name="special-instructions" placeholder="I would like..."></textarea>
                     </div>
                 </form>
-                <button>Send my order</button>
+                <button id="send-order">Send my order</button>
                 <section id="order-info"></section>
             </div>
         </main>
@@ -85,7 +102,7 @@
                 <a href="attribution.html"><li>Attribution</li></a>
             </ul>
         </div>
-        <p id="page-info">Samad Damas | Last modified:<span id="last-modified"></span></p>
+        <p id="page-info">Samad Damas | Last modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
